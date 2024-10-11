@@ -1,0 +1,97 @@
+.todos-wrapper {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 3rem;
+    color: #3A5AFA;
+  }
+  
+  .tab-container {
+    margin-top: 20px;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .tab {
+    font-size: 1.2rem;
+    color: #666;
+    padding-bottom: 10px;
+  }
+  
+  .tab.active {
+    border-bottom: 2px solid #3A5AFA;
+    color: #3A5AFA;
+  }
+  
+  .form-container {
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-label {
+    font-size: 1.2rem;
+    margin-right: 10px;
+  }
+  
+  .form-control {
+    border: 2px solid #3A5AFA;
+    border-radius: 8px;
+    padding: 10px;
+    width: 70%;
+  }
+  
+  .btn-primary {
+    background-color: #3A5AFA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    margin-left: 10px;
+  }
+  
+  .tasks-list {
+    margin-top: 30px;
+    text-align: left;
+  }
+  
+  .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .task-actions {
+    display: flex;
+  }
+  
+  .btn-check, .btn-delete {
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .btn-check::before {
+    content: '✔';
+    font-size: 1.2rem;
+  }
+  
+  .btn-delete::before {
+    content: '🗑';
+    font-size: 1.2rem;
+  }
+  

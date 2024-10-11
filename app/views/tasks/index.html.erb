@@ -1,0 +1,58 @@
+<h2>Create New Task</h2>
+<%= form_with model: @task, local: true do |f| %>
+  <div class="form-group">
+    <%= f.label :title, "Name", class: 'form-label' %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <%= f.submit "Create Task", class: 'btn btn-primary' %>
+<% end %>
+
+<h2>Incomplete Tasks</h2>
+<ul>
+  <% if @incomplete_tasks.present? && @incomplete_tasks.any? %>
+    <% @incomplete_tasks.each do |task| %>
+      <li>
+        <%= task.title %> 
+        <%= link_to 'Mark as complete', complete_task_path(task), method: :patch %>
+      </li>
+    <% end %>
+  <% else %>
+    <li>No incomplete tasks available.</li>
+  <% end %>
+</ul>
+
+<h2>Complete Tasks</h2>
+<ul>
+  <% if @complete_tasks.any? %>
+    <% @complete_tasks.each do |task| %>
+      <li>
+        <%= task.title %>
+      </li>
+    <% end %>
+  <% else %>
+    <li>No complete tasks available.</li>
+  <% end %>
+</ul>
+
+<div class="todos-wrapper">
+  <h1 class="title">TODOS</h1>
+
+  <div class="tab-container">
+    <ul class="tabs">
+      <li class="tab active">Incomplete</li>
+      <li class="tab">Complete</li>
+    </ul>
+  </div>
+
+  <div class="tasks-list">
+    <% @incomplete_tasks.each do |task| %>
+      <div class="task">
+        <%= task.title %>
+        <div class="task-actions">
+          <%= link_to 'Complete', complete_task_path(task), method: :patch, class: 'btn-check' %>
+          <%= link_to 'Delete', task_path(task), method: :delete, class: 'btn-delete' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

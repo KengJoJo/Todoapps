@@ -1,0 +1,19 @@
+current directory: /root/Work/todoapp_1650903808/vendor/bundle/ruby/3.0.0/gems/byebug-11.1.3/ext/byebug
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20241010-53804-46kpc5.rb extconf.rb
+creating Makefile
+
+current directory: /root/Work/todoapp_1650903808/vendor/bundle/ruby/3.0.0/gems/byebug-11.1.3/ext/byebug
+make DESTDIR\= clean
+
+current directory: /root/Work/todoapp_1650903808/vendor/bundle/ruby/3.0.0/gems/byebug-11.1.3/ext/byebug
+make DESTDIR\=
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+current directory: /root/Work/todoapp_1650903808/vendor/bundle/ruby/3.0.0/gems/byebug-11.1.3/ext/byebug
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20241010-53804-x492rd/byebug
